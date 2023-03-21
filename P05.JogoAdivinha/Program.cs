@@ -58,7 +58,7 @@
 
                               for (int i = 0; i < tentativas; i++)
                               {
-                                   
+                                   Console.Clear();
                                    Console.WriteLine($"\nTentativa {i + 1} de {tentativas}\n");
                                    Console.WriteLine(firula);
                                    
@@ -108,7 +108,7 @@
 
                               for (int i = 0; i < tentativas; i++)
                               {
-
+                                   Console.Clear();
                                    Console.WriteLine($"\nTentativa {i + 1} de {tentativas}\n");
                                    Console.WriteLine(firula);
                                    
@@ -157,7 +157,7 @@
                              
                               for (int i = 0; i < tentativas; i++)
                               {
-
+                                   Console.Clear();
                                    Console.WriteLine($"\nTentativa {i + 1} de {tentativas}\n");
                                    Console.WriteLine(firula);
                                    
