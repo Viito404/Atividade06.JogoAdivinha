@@ -58,7 +58,7 @@
 
                               for (int i = 0; i < tentativas; i++)
                               {
-                                   Console.Clear();
+                                   Console.Clear() ;
                                    Console.WriteLine($"\nTentativa {i + 1} de {tentativas}\n");
                                    Console.WriteLine(firula);
                                    
@@ -73,6 +73,7 @@
 
                                         Console.WriteLine("Seu chute foi menor que o número secreto!");
                                         Console.WriteLine($"Você fez {pontuacaoFinal} pontos!");
+                                        Console.ReadLine();
                                    }
 
                                    if (numeroChute > numeroAleatorio)
@@ -81,13 +82,14 @@
                                         pontuacaoFinal = pontuacaoFinal - pontuacao;
                                         Console.WriteLine("Seu chute foi maior que o número secreto!");
                                         Console.WriteLine($"Você fez {pontuacaoFinal} pontos!");
+                                        Console.ReadLine();
                                    }
 
                                    if (numeroChute == numeroAleatorio)
                                    {
                                         Console.WriteLine("Parabéns, você acertou!");
                                         Console.WriteLine($"\nPontuação final é de {pontuacaoFinal}!");
-                                        break;
+                                        break;                                       
                                    }
                                    if (i + 1 >= tentativas)
                                    {
@@ -123,6 +125,7 @@
 
                                         Console.WriteLine("Seu chute foi menor que o número secreto!");
                                         Console.WriteLine($"Você fez {pontuacaoFinal} pontos!");
+                                        Console.ReadLine();
                                    }
 
                                    if (numeroChute > numeroAleatorio)
@@ -131,6 +134,7 @@
                                         pontuacaoFinal = pontuacaoFinal - pontuacao;
                                         Console.WriteLine("Seu chute foi maior que o número secreto!");
                                         Console.WriteLine($"Você fez {pontuacaoFinal} pontos!");
+                                        Console.ReadLine();
                                    }
 
                                    if (numeroChute == numeroAleatorio)
@@ -171,6 +175,7 @@
 
                                         Console.WriteLine("Seu chute foi menor que o número secreto!");
                                         Console.WriteLine($"Você fez {pontuacaoFinal} pontos!");
+                                        Console.ReadLine();
                                    }
 
                                    if (numeroChute > numeroAleatorio)
@@ -179,6 +184,7 @@
                                         pontuacaoFinal = pontuacaoFinal - pontuacao;
                                         Console.WriteLine("Seu chute foi maior que o número secreto!");
                                         Console.WriteLine($"Você fez {pontuacaoFinal} pontos!");
+                                        Console.ReadLine();
                                    }
 
                                    if (numeroChute == numeroAleatorio)
