@@ -9,10 +9,11 @@ namespace P05.JogoAdivinha
      internal class JogoAdivinha
      {
           public string firula = new string('-', 43);
-    
-          public int tentativas = 0, numeroChute = 0,pontuacaoFinal = 1000 , pontuacao = 0, numeroAleatorio, nivelDificuldade;
 
-          public  void VerificarChute()
+          public int tentativas = 0, numeroChute = 0, pontuacaoFinal = 1000, pontuacao = 0, numeroAleatorio, nivelDificuldade;
+
+
+          private void VerificarChute()
           {
                for (int i = 0; i < tentativas; i++)
                {
@@ -41,21 +42,20 @@ namespace P05.JogoAdivinha
                }
           }
 
-          public  void AcabouTentativas()
+          private void AcabouTentativas()
           {
                Console.ForegroundColor = ConsoleColor.Red;
                Console.WriteLine("Acabaram suas tentativas!");
                Console.ResetColor();
-               Console.ReadLine();
           }
 
-          public  void AcertouChute()
+          private void AcertouChute()
           {
                Console.WriteLine("Parabéns, você acertou!");
                Console.WriteLine($"\nPontuação final é de {pontuacaoFinal}!");
           }
 
-          public  int ChuteMaior()
+          private int ChuteMaior()
           {
                int pontuacao = Math.Abs((numeroChute - numeroAleatorio) / 2);
                pontuacaoFinal = pontuacaoFinal - pontuacao;
@@ -65,7 +65,7 @@ namespace P05.JogoAdivinha
                return pontuacao;
           }
 
-          public  int ChuteMenor()
+          private int ChuteMenor()
           {
                int pontuacao = Math.Abs((numeroChute - numeroAleatorio) / 2);
                pontuacaoFinal = pontuacaoFinal - pontuacao;
@@ -76,7 +76,7 @@ namespace P05.JogoAdivinha
                return pontuacao;
           }
 
-          public  int PegarChute(int i)
+          private int PegarChute(int i)
           {
                int numeroChute;
                Console.Clear();
@@ -87,7 +87,7 @@ namespace P05.JogoAdivinha
                return numeroChute;
           }
 
-          public  int PegarValor(string mensagem)
+          private int PegarValor(string mensagem)
           {
                Console.Write(mensagem);
                int valor = Convert.ToInt32(Console.ReadLine());
@@ -96,6 +96,7 @@ namespace P05.JogoAdivinha
 
           public void GerarJogoAdivinha()
           {
+               nivelDificuldade = PegarValor("\nEscolha:\n> ");
                switch (nivelDificuldade)
                {
                     case 1:

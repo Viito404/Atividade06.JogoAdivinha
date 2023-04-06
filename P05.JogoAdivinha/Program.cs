@@ -10,17 +10,10 @@
                     Random aleatorio = new Random();
                     jogo1.numeroAleatorio = aleatorio.Next(1, 20);
                     GerarMenu();
-
-                    Console.WriteLine("\nEscolha o nível de dificuldade");
-                    Console.WriteLine("\n(1) Fácil (2) Médio (3) Difícil");
-
-                    jogo1.nivelDificuldade = jogo1.PegarValor("\nEscolha:\n> ");
                     jogo1.GerarJogoAdivinha();
-
                     Console.ReadLine();
 
                } while (true);
-
           }
           private static void GerarMenu()
           {
@@ -41,6 +34,8 @@
                     Console.ResetColor();
                     Environment.Exit(0);
                }
+                    Console.WriteLine("\nEscolha o nível de dificuldade");
+                    Console.WriteLine("\n(1) Fácil (2) Médio (3) Difícil");
           }
      }
 }
